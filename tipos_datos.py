@@ -15,6 +15,10 @@ dato_entero = 20
 dato_flotante = 20.3
 cadena_texto = "Hola"
 
+#Funcion perteneciente al tema de funciones, ver funciones.py
+def funcion_ejemplo():
+    return("Funcion como objeto desde tipos de datos")
+
 # Sequence -> list, tuple, range
 # Mapping -> dict
 
