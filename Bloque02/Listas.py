@@ -18,7 +18,6 @@ cadena3 = """ Cadena larga """
 #Cadena de caracteres cruda, se muestra tal cual es definida
 miNombre = r"\tHola\n Juan \\"
 
-
 #len() Nos ayuda a conocer cuantos elementos existen en nuestra coleccion
 #print(len(cadena))
 
@@ -45,7 +44,7 @@ letras = [['a','b','c'],['d','e','f']]
 """
 
 #Muchas listas wuuuuu
-lista = [['a',['4',['c',['3'],[2]]]]]
+lista = [['a',['4',['c',['3'],[2,3,4,5,2]]]]]
 
 #print(int(lista[0][1][1][1][0]) + lista[0][1][1][2][0])
 #Salida 5
@@ -86,8 +85,8 @@ print(f"Despues de ordenar {listaNumerica}")
 listaNumerica.sort(reverse=True)
 print(f"Despues de ordenar invertido {listaNumerica}")
 
-
-
+#Para modificar un valor en una lista necesitamos especificar 
+#Nombre[indice] = nuevo valor
 
 #Ejemplo de lista en Java
 # int [] nombre = new int[tamaño];
