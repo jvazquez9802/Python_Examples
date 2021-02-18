@@ -47,7 +47,7 @@ alumnos_tec =\
 print(f"Carrera de 17460654: {alumnos_tec['17460654']['carrera']}")
 
 #Metodos con diccionarios
-
+items
 # dict -> Recibir una representación de un diccionario y crearlo si es factible
 dic = dict(nombre="Jose", edad=25, carrera="arquitectura")
 print(dic)
