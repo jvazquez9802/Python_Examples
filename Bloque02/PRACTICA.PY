@@ -1,6 +1,33 @@
 import math
 
 figuras = []
+figuras.append({"tipo":"Cuadrado", "area":16, "perimetro":16})
+figuras.append({"tipo":"Cuadrado", "area":4, "perimetro":8})
+figuras.append({"tipo":"Triangulo Escaleno", "area":12.23, "perimetro":9})
+figuras.append({"tipo":"Triangulo Equilatero", "area":25, "perimetro":56})
+figuras.append({"tipo":"Triangulo Isosceles", "area":25, "perimetro":58})
+figuras.append({"tipo":"Circulo", "area":24, "perimetro":36})
+
+def separar_clasificacion():
+    circulos = []
+    t_equilateros = []
+    t_isosceles = []
+    t_escalenos = []
+    cuadrados = []
+    
+    for i in figuras:
+        if i.get('tipo').lower() == "cuadrado":
+            cuadrados.append(i)
+        elif i.get('tipo').lower() == "circulo":
+            circulos.append(i)
+        else:
+            if i.get('tipo').lower() == "triangulo equilatero":
+                t_equilateros.append(i)
+            elif i.get('tipo').lower() == "triangulo isosceles":
+                t_isosceles.append(i)
+            else:
+                t_escalenos.append(i)
+    return [cuadrados, circulos, t_equilateros, t_isosceles, t_escalenos]
 
 
 def area_cuadrado(lado):
@@ -105,7 +132,7 @@ def main():
                 for i in figuras:
                     if var.lower() == i.get('tipo').lower():
                         bandera = True
-                        imprimir_figura(i)
+                        print(imprimir_figura(i))
                 
                 if not bandera:
                     print("No hay elementos para esta clasificación aún")
@@ -114,33 +141,54 @@ def main():
             for i in figuras:
                     if clasificacion.lower() == i.get('tipo').lower():
                         bandera = True
-                        imprimir_figura(i)
+                        print(imprimir_figura(i))
             if not bandera:
                     print("No hay elementos para esta clasificación aún")
         else:
-            print("[ERROR] Tipo de Figura no válida")
+            print("[ERROR] Tipo de Figura no válido")
             
-            
+
+    def imprimir():
         
+        clasificaciones = separar_clasificacion()
+        
+        def imprimir_clasificacion(clasificacion, lista):
+            print(f"===== {clasificacion} =====")
+            for i in lista:
+                print(imprimir_figura(i))
+            print()
+            
+        for i in clasificaciones:
+            imprimir_clasificacion(i[0].get('tipo').upper(), i)
     
+    
+    def sumador_propiedad(propiedad):
+        print(f"==== {propiedad.upper()} POR CLASIFICACION ====")
+        clasificaciones = separar_clasificacion()
+        for i in clasificaciones:
+            sumador = 0
+            print(f" -> {i[0].get('tipo').upper()}", end="")
+            for j in i:
+                sumador += j.get(propiedad)
+            print(f" {sumador}")
     
     while True:
         print("============ Menu Figuras ============\n1.- Crear Figura\n2.- Listar Clasificación\n"\
             +"3.- Listar Todo\n4.- Suma de áreas\n5.- Suma de perímetros\n6.- Limpiar Lista\n0.- Salir")
         op = input("Selecciona una opción [0 : 6] ->  ")
         if op == "1":
-            print(figuras)
             menu_figuras()
         elif op == "2":
             listar_clasificacion(input("Ingresa la clasificación a imprimir -> "))
         elif op == "3":
-            print("Soy la opcion 3")
+            imprimir()
         elif op == "4":
-            print("Soy la opcion 4")
+           sumador_propiedad("area")
         elif op == "5":
-            print("Soy la opcion 5")
+           sumador_propiedad("perimetro")
         elif op == "6":
-            print("Soy la opcion 6")
+            figuras.clear()
+            print(f"Se han eliminado todos los registros: {figuras}")
         elif op == "0":
             print("Gracias por utilizar nuestra calculadora... [Saliendo]")
             return
