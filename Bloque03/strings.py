@@ -97,8 +97,4 @@ print(f"partir en una tupla de 3: {text.partition('Mundo')}") #(antes sep, sep, 
 text = text= 'Hola Juan\nQue onda Juan amigo'
 print(f"Split con maximo: {text.rpartition('Juan')}")
 #Join
-
 print(f"Join: {'Dice: '.join(['Buenas','Nuevas'])}") #Une cadenas de caracteres mediante una cadena especificada
-
-
-
