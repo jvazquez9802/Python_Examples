@@ -1,5 +1,5 @@
 #excepciones 
-"""
+
 while True:
     try:
         num = int(input("Ingresa un numero"))
@@ -12,9 +12,9 @@ while True:
         print("Tienes una variable no definida")
     except ZeroDivisionError:
         print("Tiende a infinito")
-"""
+
         
-"""
+
 numero = 8
 numero2 = 2
 try:
@@ -23,20 +23,13 @@ except ZeroDivisionError:
     print("Tiende a infinito")
 else:
     print(f"El resultado es: {resultado}")
-    """
     
-"""try:
+    
+try:
     print(hola)
 except NameError as err:
-    print(err)"""
-"""
-try{
-    
-} catch(Exception e){
-    
-}
-"""
-"""#
+    print(err)
+
 try:
     raise NameError('Hola tienes un error')
 except NameError:
@@ -49,9 +42,9 @@ try:
 except NameError:
     print("Autosabotaje")
     raise
-    """
+    
 
-"""
+
 def funcion():
     raise IOError
 
@@ -59,7 +52,7 @@ try:
     funcion()
 except IOError as exc:
     raise RuntimeError("Algo ocurrio mal en la lectura") from exc
-"""
+
 
 
 #Primero se ejecuta la clausula try (try y except son palabras reservadas)
@@ -70,7 +63,7 @@ except IOError as exc:
 
 #Acciones de limpieza clausula finally
 
-"""def verdad_falsedad():
+def verdad_falsedad():
     n = 8
     try:
         n /= 2
@@ -83,7 +76,7 @@ except IOError as exc:
         print('Yo me ejecuto siempre')
 
 
-print(verdad_falsedad())"""
+print(verdad_falsedad())
 
 
 try:
