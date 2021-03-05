@@ -1,0 +1,14 @@
+{
+    "Mensajes": [
+        {
+            "Emisor": "Juan Luis",
+            "Contenido": "Hola ¿Cómo estás?",
+            "Receptor": "Fernando"
+        },
+        {
+            "Emisor": "Fernando",
+            "Contenido": "Juan ya está dándome lata, si te pregunta, no sabes nada de mi",
+            "Receptor": "Ana"
+        }
+    ]
+}
